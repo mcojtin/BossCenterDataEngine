@@ -1,0 +1,31 @@
+# Insurance (VerticalID 4) health fields that stay OUT of Listmanagement_core.
+# They are never copied into InsuranceAttr. One name per line.
+#
+# Kept in the core by decision on 2026-11-19:
+#   Uninsurable, HeightFeet, HeightInches, Weight, Smoker, HealthConditions, RecentConcern
+TreatedByPhysician
+Pregnant
+RecentHospitalization
+Medication
+AidsHIV
+AlcoholDrugAbuse
+AlzheimersDementia
+Asthma
+Cancer
+ClinicalDepression
+Diabetes
+Emphysema
+Epilepsy
+HeartAttack
+HeartDisease
+HepatitisLiver
+HighBloodPressure
+HighCholesterol
+KidneyDisease
+MentalIllness
+MultipleSclerosis
+PulmonaryDisease
+Stroke
+Ulcers
+VascularDisease
+OtherIllnesses

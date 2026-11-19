@@ -1,0 +1,14 @@
+﻿VerticalID,VerticalName,VerticalTable,CleanUpProcess
+1,Mortgage,MortgageInfo,1
+4,Insurance,InsuranceInfo,0
+5,Solar,SolarInfo,1
+6,AutoWarranty,AutoInfo,0
+7,Student,StudentInfo,0
+10,CreditRepair,CreditRepairInfo,0
+11,Verified,Verified_MortgageInfo,0
+12,HomeOwner,HomeOwnerInfo,0
+13,FullSuiteSolar,FullSuite_SolarInfo,0
+14,CBD,CBDInfo,0
+15,Business,BusinessInfo,0
+16,LiveClick,LiveClickInfo,0
+17,LiveSurvey,LiveSurveyInfo,0

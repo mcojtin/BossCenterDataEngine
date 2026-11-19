@@ -1,0 +1,5 @@
+pyodbc>=5.1
+keyring>=25.0
+# Only needed when DATAENGINE_KEYVAULT_URL is set:
+azure-identity>=1.17
+azure-keyvault-secrets>=4.8
