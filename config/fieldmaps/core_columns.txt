@@ -1,0 +1,15 @@
+# Source fields that live in the shared core tables (LeadEvent, Contact, Address),
+# so they are NOT repeated in the per-vertical *Attr tables. One name per line.
+LeadID
+TrustedToken
+TimeStamp
+FirstName
+LastName
+HomePhone
+CellPhone
+Email
+Address
+City
+State
+Zip
+County
