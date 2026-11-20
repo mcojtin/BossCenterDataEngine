@@ -227,3 +227,11 @@ def test_connection_string_uses_pipeline_login(monkeypatch):
     assert "UID=dataengine_pipeline;" in cs
     assert "DATABASE=Listmanagement_core;" in cs
     assert "Encrypt=yes" in cs
+    assert "APP=dataengine-migrate" in cs
+    assert "Application Name" not in cs  # ADO.NET keyword; ODBC rejects it
+
+
+def test_connection_string_escapes_braces_in_password(monkeypatch):
+    monkeypatch.setenv("DATAENGINE_SQL_SERVER", "example.database.windows.net")
+    cs = connection.connection_string("a}b;c")
+    assert "PWD={a}}b;c};" in cs

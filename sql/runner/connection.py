@@ -51,15 +51,20 @@ def get_password() -> str:
     return password
 
 
+def odbc_quote(value: str) -> str:
+    """Brace-quote an ODBC value; a literal '}' is escaped as '}}'."""
+    return "{" + value.replace("}", "}}") + "}"
+
+
 def connection_string(password: str) -> str:
     server = os.environ.get("DATAENGINE_SQL_SERVER")
     if not server:
         raise ConfigError("Set DATAENGINE_SQL_SERVER to the Managed Instance host name.")
     driver = os.environ.get("DATAENGINE_SQL_DRIVER", "ODBC Driver 18 for SQL Server")
     return (
-        f"DRIVER={{{driver}}};SERVER={server};DATABASE={target_database()};"
-        f"UID={LOGIN};PWD={{{password}}};Encrypt=yes;TrustServerCertificate=no;"
-        "Application Name=dataengine-migrate"
+        f"DRIVER={odbc_quote(driver)};SERVER={server};DATABASE={target_database()};"
+        f"UID={LOGIN};PWD={odbc_quote(password)};Encrypt=yes;TrustServerCertificate=no;"
+        "APP=dataengine-migrate"
     )
 
 
